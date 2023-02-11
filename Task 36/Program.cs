@@ -19,19 +19,19 @@ void PrintArray(int[] array)
     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
 }
 
-int SumNegativeIndex(int[]array)  
- {
-     int sum = 0;
-    for(int i = 0; i < array.Length; i++) 
-     {
-         if(i % 2 != 0)
-         {
+int SumNegativeIndex(int[] array)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i % 2 != 0)
+        {
             sum += array[i];
-         }
-     }
-     return sum;   
- }
+        }
+    }
+    return sum;
+}
 
- int[] myArray = GenerateArray(9, 0, 50);
+int[] myArray = GenerateArray(9, 0, 50);
 PrintArray(myArray);
 System.Console.WriteLine($"Cумму элементов, стоящих на нечётных позициях: {SumNegativeIndex(myArray)}");
